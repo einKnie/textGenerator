@@ -73,10 +73,6 @@ private:
   /// @param[in] fmt formatted string
   void quickPrint(const char *fmt, ...);
 
-  void initCurses(void);
-  void exitCurses(void);
-
-
 };
 
 #endif //_TEXT_GEN_H_

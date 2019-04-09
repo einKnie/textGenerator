@@ -31,12 +31,9 @@ int main(int argc, char *argv[]) {
   textGen->init(to_upper(text, strlen(text)));
   textGen->generate();
 
-  // textGen->init(to_lower(text, strlen(text)));
+  // printf("Now trying strfry generation\n");
+  // textGen->init(text, TextGenerator::EGenStrfry);
   // textGen->generate();
-
-  printf("Now trying strfry generation\n");
-  textGen->init(text, TextGenerator::EGenStrfry);
-  textGen->generate();
 
 
   delete textGen;

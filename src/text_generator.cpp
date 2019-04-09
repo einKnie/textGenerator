@@ -92,8 +92,15 @@ int TextGenerator::generate(void) {
     if (strncmp(m_tmp, m_text, strlen(m_text)) == 0) {
       m_found = 1;
     } else if (m_genType == EGenStrfry) {
+      for (uint8_t i = 0; i < strlen(m_text); i++) {
+        if (m_tmp[i] == m_text[i]) {
+          quickPrint("\033[35m%c\033[0m", m_tmp[i]);
+        } else {
+          quickPrint("%c", m_tmp[i]);
+        }
+      }
       strfry(m_tmp);
-      quickPrint("\r%s", m_tmp);
+      // quickPrint("\r%s", m_tmp);
     }
 
   } while (!m_found);
