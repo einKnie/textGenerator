@@ -1,8 +1,23 @@
+/*   _______        _
+ *  |__   __|      | |
+ *     | | _____  _| |_
+ *     | |/ _ \ \/ / __|
+ *     | |  __/>  <| |_
+ *    _|_|\___/_/\_\\__|              _
+ *  / ____|                         | |
+ * | |  __  ___ _ __   ___ _ __ __ _| |_ ___  _ __
+ * | | |_ |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+ * | |__| |  __/ | | |  __/ | | (_| | || (_) | |
+ * \_____|\___|_| |_|\___|_|  \__,_|\__\___/|_|  v0.3
+ * <einKnie@gmx.at>
+ */
+
 #include "text_generator.h"
 #include <stdarg.h>
+#include <time.h>
+#include <stdlib.h>
 
 TextGenerator::TextGenerator(const char* text) : TextGenerator(text, TextGenerator::EGenRandom) { }
-
 TextGenerator::TextGenerator(const char* text, genType_e type) {
   // seed random generator
   srand(time(0));
@@ -78,6 +93,7 @@ int TextGenerator::generate(void) {
       m_found = 1;
     } else if (m_genType == EGenStrfry) {
       strfry(m_tmp);
+      quickPrint("\r%s", m_tmp);
     }
 
   } while (!m_found);
