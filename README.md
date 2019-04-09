@@ -7,7 +7,7 @@ Once a correct character is found, it is locked in place.<br>
 ### Modes
 
 Regular mode uses regular random character generation, one character at a time.<br>
-An <i>experimental</i> mode using strfry on the entire string is also implemented.
+An <b>experimental</b> mode using [strfry](https://linux.die.net/man/3/strfry) on the entire string is also implemented.
 But beware: Generation using stryfry will likely take forever.
 
 ## Usage
