@@ -2,7 +2,7 @@ SRC_DIR     = ./src
 INC_DIR     = ./inc
 TARGET_DIR  = ./bin
 OBJ_DIR     = $(TARGET_DIR)/obj
-TARGET      = out
+TARGET      = textgen
 
 CC          = g++
 CFLAGS      = -Wall -std=c++11 -pedantic -I$(INC_DIR)
