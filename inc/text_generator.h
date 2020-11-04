@@ -19,7 +19,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#define MAX_TEXT_LEN 1000
+#define MAX_TEXT_LEN 200
 
 class TextGenerator {
 public:
@@ -39,7 +39,7 @@ public:
   ~TextGenerator();
 
   /// Initialize TextGenerator with new text
-  void init(const char *text, genType_e type = EGenRandom);
+  void init(const char *text, genType_e type);
 
   /// Start generation with a specific string
   /// @param[in] start the string to start with
